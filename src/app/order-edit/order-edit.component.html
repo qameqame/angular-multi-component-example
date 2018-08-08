@@ -1,0 +1,21 @@
+<a (click)="displaySwitch(true)">(編集)</a>
+<section *ngIf="display">
+  <div class="content">
+    <form>
+      <div>
+        <label>
+          商品名
+        </label>
+        <input type="text" name="itemName" [(ngModel)]="editItem.itemName">
+      </div>
+      <div>
+        <div>
+          <label for="orderAmount">数量</label>
+          <input type="text" name="orderAmount" [(ngModel)]="editItem.amount">
+        </div>
+        <button (click)="onEdit($event)">決定</button>
+      </div>
+    </form>
+
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<div class="order-list">
+  <div class="order-item" *ngFor="let o of orders">
+    商品名：{{o.itemName}} 数量 {{o.amount}}
+    <span class="right-link">
+      <order-edit [item]="o" (edited)="onEdit($event)">
+      </order-edit>
+    </span>
+  </div>
+</div>
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="What's your name?">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose:
+    <i>{{animal}}</i>
+  </li>
+</ol>
+<button mat-button>Click me!</button>
