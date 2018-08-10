@@ -5,6 +5,7 @@ import { Inject } from '@angular/core';
 import { OrderInputComponent } from '../order-input/order-input.component';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'order-list',
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css']
@@ -29,7 +30,9 @@ export class OrderListComponent {
     });
   }
 
+  // tslint:disable-next-line:member-ordering
   name: string;
+  // tslint:disable-next-line:member-ordering
   animal: string;
 
   openDialog(): void {
